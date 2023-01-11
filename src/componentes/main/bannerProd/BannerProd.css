@@ -1,0 +1,72 @@
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
+.banner-producto-container {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+}
+
+.banner-izq {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  color: #414042;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.producto-id {
+  font-size: 1rem;
+}
+
+.producto-nombre {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.prod-img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-der {
+  width: 50%;
+  height: 95vh;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.banner-der:hover {
+  filter: grayscale(0);
+}
+
+.invert {
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-producto-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-izq {
+    height: 100%;
+  }
+  .banner-der {
+    width: 100%;
+  }
+  .producto-id {
+    margin-top: 2rem;
+  }
+
+  .producto-nombre {
+    font-size: 1.6rem;
+  }
+}

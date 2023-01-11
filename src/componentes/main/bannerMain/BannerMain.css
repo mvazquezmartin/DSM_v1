@@ -1,0 +1,55 @@
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 2.5rem;
+}
+.banner-p {
+  font-size: 1.2rem;
+}
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/bgBannerMain.png");
+  height: 100vh;
+}
+
+.banner-texto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  color: #000;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.my-btc {
+  display: flex;
+  width: 250px;
+  height: 55px;
+  background-color: rgb(36, 39, 39);
+  color: aliceblue;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.my-btc:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-p {
+    font-size: 1rem;
+  }
+}

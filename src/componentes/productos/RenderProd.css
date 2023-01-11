@@ -1,0 +1,24 @@
+.container-producto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;    
+}
+
+.titulo-productos{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .container-producto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo-productos{
+        font-size: 4rem;
+    }
+}

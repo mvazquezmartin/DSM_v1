@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #414042;
-  min-height: 40vh;
+  min-height: 30vh;
 }
 /* * {
   outline: 1px solid #f00 !important;
@@ -23,7 +23,7 @@
 }
 .info-pie p {
   
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #fff;
 }
 

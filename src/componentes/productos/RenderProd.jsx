@@ -12,7 +12,7 @@ const RenderProd = () => {
     pedirDatos()
       .then((res) => {
         if (genero) {
-          setProductos(res.filter(prod => prod.genero === genero));
+          setProductos(res.filter((prod) => prod.genero === genero));
         } else {
           setProductos(res);
         }

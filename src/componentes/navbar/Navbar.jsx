@@ -4,8 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import { BsCart } from "react-icons/bs";
 import "./Navbar.css";
+import CartWidget from "../cartWidget/CartWidget";
 
 function NavbarBt() {
   return (
@@ -35,17 +35,16 @@ function NavbarBt() {
                 Ver Todo
               </NavDropdown.Item>
             </NavDropdown>
-            <Link to="/nosotros" className="nav-link">
+            <Link to="/contacto" className="nav-link">
               CONTACTO
             </Link>
             <Link to="/nosotros" className="nav-link">
               NOSOTROS
             </Link>
+           
           </Nav>
         </Navbar.Collapse>
-        <Nav.Link className="nav-link">
-          <BsCart className="icono-cart" />
-        </Nav.Link>
+        <CartWidget/>
       </Container>
     </Navbar>
   );

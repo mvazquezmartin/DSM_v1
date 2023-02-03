@@ -1,0 +1,22 @@
+.container-contacto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.container-img-formulario{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-img-contacto{
+    width: 30%;
+    height: 40%;
+}
+.img-contacto{
+    height: 100%;
+    width: 100%;    
+}
+.container-formulario{
+    width: 60%;
+}

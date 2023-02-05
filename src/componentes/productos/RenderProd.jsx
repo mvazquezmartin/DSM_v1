@@ -1,33 +1,36 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../helper/pedirData";
-import ProdCard from "./ProdCard";
 import { useParams } from "react-router-dom";
+/* import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";   */ 
+import ProdCard from "./ProdCard";
 import "./RenderProd.css";
 
 const RenderProd = () => {
+  const [load, setLoad] = useState(true);
   const [productos, setProductos] = useState([]);
   const { genero } = useParams();
 
   useEffect(() => {
-    pedirDatos()
-      .then((res) => {
-        if (genero) {
-          setProductos(res.filter((prod) => prod.genero === genero));
-        } else {
-          setProductos(res);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    setLoad(true);
+    /* const productosRef = collection(db, "productos");     
+    getDocs(productosRef).then((resp) => {
+      console.log(resp.docChanges.map((doc) => doc.data()));
+    }); */
   }, [genero]);
 
   return (
     <div>
-      <h1 className="titulo-productos">Productos</h1>
-      <div className="container-producto">
-        <ProdCard productos={productos} />
-      </div>
+      {
+        load 
+        ? <h2 style={ {margin: '5rem'} }>Cargando...</h2>
+        :
+        <div className="container-main-prod">
+          <h1 className="titulo-productos">Productos</h1>
+          <div className="container-producto">
+            <ProdCard productos={productos} />
+          </div>
+        </div>
+      }
     </div>
   );
 };

@@ -43,7 +43,9 @@ const Footer = () => {
           <p>Privacidad de Calidad</p>
         </div>
         <div className="logo-icono-pie">
-          <img className="img-logo-pie" src={logo} alt="Logo DSM" />
+          <div className="logo-contenedor">
+            <img className="img-logo-pie" src={logo} alt="Logo DSM" />
+          </div>
           <div className="icono-pie">
             <a href="https://www.facebook.com/" target="_blank">
               <BsFacebook className="icono-rrss" />

@@ -5,9 +5,7 @@ h1 {
 h3 {
   font-size: 2.5rem;
 }
-.banner-p {
-  font-size: 1.2rem;
-}
+
 .banner-container {
   display: flex;
   justify-content: center;
@@ -21,20 +19,21 @@ h3 {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  align-items: center;
-  opacity: 1;
+  align-items: center;  
   color: #000;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
+.banner-p {
+  font-size: 1.2rem;
+}
 .my-btc {
   display: flex;
   width: 250px;
   height: 55px;
   background-color: rgb(36, 39, 39);
   color: aliceblue;
-  border-radius: 15px;
+  border-radius: 25px;
   text-align: center;
   justify-content: center;
   align-items: center;

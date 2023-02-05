@@ -16,12 +16,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/productos" element={<RenderProd />} />
           <Route path="/productos/:genero" element={<RenderProd />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
         <Footer />
       </BrowserRouter>

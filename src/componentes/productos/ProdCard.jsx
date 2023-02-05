@@ -13,8 +13,7 @@ const ProdCard = ({ productos }) => {
             <h5>{prod.nombre}</h5>
           </div>
           <div className="color-card">Color:{prod.color}</div>
-          <div className="precio-card">${prod.precio}</div>
-          {/* <div>{prod.genero}</div> */}
+          <div className="precio-card">${prod.precio}</div>          
           <Link to={`/detail/${prod.id}`} className="btn-card">
             Ver Más
           </Link>

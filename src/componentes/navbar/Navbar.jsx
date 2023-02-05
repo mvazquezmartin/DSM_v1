@@ -9,7 +9,7 @@ import CartWidget from "../cartWidget/CartWidget";
 
 function NavbarBt() {
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className="py-4" fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link to="/" className="navbar-brand">
           DSM Soul Vibes
@@ -21,10 +21,10 @@ function NavbarBt() {
         >
           <Nav>
             <NavDropdown title="PRODUCTOS" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/productos/Male">
+              <NavDropdown.Item as={Link} to="/productos/hombre">
                 Hombre
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/productos/Female">
+              <NavDropdown.Item as={Link} to="/productos/mujer">
                 Mujer
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">

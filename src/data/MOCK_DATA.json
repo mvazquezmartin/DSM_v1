@@ -1,50 +1,452 @@
-[{"id":1,"nombre":"Sungazer, yellow-brown","genero":"Female","color":"Blue","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":2259,"stock":38},
-{"id":2,"nombre":"Red-capped cardinal","genero":"Female","color":"Purple","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1411,"stock":17},
-{"id":3,"nombre":"Shrike, common boubou","genero":"Female","color":"Red","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":1477,"stock":49},
-{"id":4,"nombre":"Lion, southern sea","genero":"Female","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1104,"stock":39},
-{"id":5,"nombre":"Gull, pacific","genero":"Female","color":"Fuscia","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":2222,"stock":33},
-{"id":6,"nombre":"Pie, indian tree","genero":"Female","color":"Orange","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":2074,"stock":11},
-{"id":7,"nombre":"African red-eyed bulbul","genero":"Female","color":"Khaki","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1975,"stock":41},
-{"id":8,"nombre":"Red-shouldered glossy starling","genero":"Female","color":"Goldenrod","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":2130,"stock":37},
-{"id":9,"nombre":"White-lipped peccary","genero":"Male","color":"Puce","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":2372,"stock":18},
-{"id":10,"nombre":"Bird, bare-faced go away","genero":"Female","color":"Pink","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1711,"stock":39},
-{"id":11,"nombre":"Crowned hawk-eagle","genero":"Female","color":"Aquamarine","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1866,"stock":35},
-{"id":12,"nombre":"Ocelot","genero":"Female","color":"Red","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1524,"stock":28},
-{"id":13,"nombre":"Kingfisher, malachite","genero":"Female","color":"Teal","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":2481,"stock":48},
-{"id":14,"nombre":"Little blue penguin","genero":"Female","color":"Indigo","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1272,"stock":11},
-{"id":15,"nombre":"Kangaroo, western grey","genero":"Female","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":1239,"stock":33},
-{"id":16,"nombre":"Red-capped cardinal","genero":"Female","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1342,"stock":14},
-{"id":17,"nombre":"Deer, black-tailed","genero":"Female","color":"Khaki","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":2497,"stock":45},
-{"id":18,"nombre":"Long-billed corella","genero":"Female","color":"Violet","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":2198,"stock":39},
-{"id":19,"nombre":"Legaan, ground","genero":"Female","color":"Yellow","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1742,"stock":39},
-{"id":20,"nombre":"African porcupine","genero":"Male","color":"Orange","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1878,"stock":43},
-{"id":21,"nombre":"Rhea, gray","genero":"Male","color":"Goldenrod","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":1581,"stock":23},
-{"id":22,"nombre":"Bandicoot, southern brown","genero":"Female","color":"Fuscia","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1133,"stock":16},
-{"id":23,"nombre":"Stork, european","genero":"Male","color":"Maroon","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":2126,"stock":47},
-{"id":24,"nombre":"Goose, greylag","genero":"Female","color":"Indigo","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1664,"stock":32},
-{"id":25,"nombre":"Lemur, ring-tailed","genero":"Male","color":"Teal","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1372,"stock":11},
-{"id":26,"nombre":"Red-shouldered glossy starling","genero":"Female","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":2214,"stock":28},
-{"id":27,"nombre":"Black-eyed bulbul","genero":"Female","color":"Crimson","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":2027,"stock":16},
-{"id":28,"nombre":"Pied cormorant","genero":"Male","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1583,"stock":21},
-{"id":29,"nombre":"Amazon parrot (unidentified)","genero":"Female","color":"Teal","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1178,"stock":45},
-{"id":30,"nombre":"Black-throated cardinal","genero":"Female","color":"Indigo","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":2449,"stock":44},
-{"id":31,"nombre":"White-bellied sea eagle","genero":"Male","color":"Crimson","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1778,"stock":27},
-{"id":32,"nombre":"Galah","genero":"Female","color":"Crimson","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":2058,"stock":16},
-{"id":33,"nombre":"Short-nosed bandicoot","genero":"Male","color":"Puce","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1992,"stock":35},
-{"id":34,"nombre":"Egret, snowy","genero":"Female","color":"Maroon","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1746,"stock":38},
-{"id":35,"nombre":"Silver-backed fox","genero":"Male","color":"Pink","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1109,"stock":43},
-{"id":36,"nombre":"Elk, Wapiti","genero":"Female","color":"Pink","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1242,"stock":20},
-{"id":37,"nombre":"Ground monitor (unidentified)","genero":"Male","color":"Yellow","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1968,"stock":20},
-{"id":38,"nombre":"Squirrel, malabar","genero":"Female","color":"Turquoise","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1311,"stock":24},
-{"id":39,"nombre":"Crane, wattled","genero":"Female","color":"Purple","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":2047,"stock":18},
-{"id":40,"nombre":"Heron, black-crowned night","genero":"Male","color":"Red","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":2250,"stock":40},
-{"id":41,"nombre":"Lava gull","genero":"Male","color":"Pink","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1834,"stock":47},
-{"id":42,"nombre":"Dragon, frilled","genero":"Male","color":"Orange","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1806,"stock":43},
-{"id":43,"nombre":"Griffon vulture","genero":"Female","color":"Maroon","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":1713,"stock":49},
-{"id":44,"nombre":"Grey phalarope","genero":"Female","color":"Pink","imagen":"http://dummyimage.com/250x200.png/dddddd/000000","precio":1919,"stock":47},
-{"id":45,"nombre":"Stork, woolly-necked","genero":"Female","color":"Fuscia","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1391,"stock":13},
-{"id":46,"nombre":"Yak","genero":"Male","color":"Blue","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":2391,"stock":14},
-{"id":47,"nombre":"Ringtail cat","genero":"Male","color":"Red","imagen":"http://dummyimage.com/250x200.png/cc0000/ffffff","precio":2005,"stock":38},
-{"id":48,"nombre":"Ferret, black-footed","genero":"Male","color":"Goldenrod","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1872,"stock":20},
-{"id":49,"nombre":"Platypus","genero":"Male","color":"Mauv","imagen":"http://dummyimage.com/250x200.png/ff4444/ffffff","precio":1793,"stock":15},
-{"id":50,"nombre":"Iguana, land","genero":"Male","color":"Blue","imagen":"http://dummyimage.com/250x200.png/5fa2dd/ffffff","precio":1151,"stock":45}]
+[
+  {
+    "id": 1,
+    "nombre": "Sungazer, yellow-brown",
+    "genero": "Female",
+    "color": "Blue",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 2259,
+    "stock": 38
+  },
+  {
+    "id": 2,
+    "nombre": "Red-capped cardinal",
+    "genero": "Female",
+    "color": "Purple",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1411,
+    "stock": 17
+  },
+  {
+    "id": 3,
+    "nombre": "Shrike, common boubou",
+    "genero": "Female",
+    "color": "Red",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 1477,
+    "stock": 49
+  },
+  {
+    "id": 4,
+    "nombre": "Lion, southern sea",
+    "genero": "Female",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1104,
+    "stock": 39
+  },
+  {
+    "id": 5,
+    "nombre": "Gull, pacific",
+    "genero": "Female",
+    "color": "Fuscia",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 2222,
+    "stock": 33
+  },
+  {
+    "id": 6,
+    "nombre": "Pie, indian tree",
+    "genero": "Female",
+    "color": "Orange",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 2074,
+    "stock": 11
+  },
+  {
+    "id": 7,
+    "nombre": "African red-eyed bulbul",
+    "genero": "Female",
+    "color": "Khaki",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1975,
+    "stock": 41
+  },
+  {
+    "id": 8,
+    "nombre": "Red-shouldered glossy starling",
+    "genero": "Female",
+    "color": "Goldenrod",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 2130,
+    "stock": 37
+  },
+  {
+    "id": 9,
+    "nombre": "White-lipped peccary",
+    "genero": "Male",
+    "color": "Puce",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 2372,
+    "stock": 18
+  },
+  {
+    "id": 10,
+    "nombre": "Bird, bare-faced go away",
+    "genero": "Female",
+    "color": "Pink",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1711,
+    "stock": 39
+  },
+  {
+    "id": 11,
+    "nombre": "Crowned hawk-eagle",
+    "genero": "Female",
+    "color": "Aquamarine",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1866,
+    "stock": 35
+  },
+  {
+    "id": 12,
+    "nombre": "Ocelot",
+    "genero": "Female",
+    "color": "Red",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1524,
+    "stock": 28
+  },
+  {
+    "id": 13,
+    "nombre": "Kingfisher, malachite",
+    "genero": "Female",
+    "color": "Teal",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 2481,
+    "stock": 48
+  },
+  {
+    "id": 14,
+    "nombre": "Little blue penguin",
+    "genero": "Female",
+    "color": "Indigo",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1272,
+    "stock": 11
+  },
+  {
+    "id": 15,
+    "nombre": "Kangaroo, western grey",
+    "genero": "Female",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 1239,
+    "stock": 33
+  },
+  {
+    "id": 16,
+    "nombre": "Red-capped cardinal",
+    "genero": "Female",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1342,
+    "stock": 14
+  },
+  {
+    "id": 17,
+    "nombre": "Deer, black-tailed",
+    "genero": "Female",
+    "color": "Khaki",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 2497,
+    "stock": 45
+  },
+  {
+    "id": 18,
+    "nombre": "Long-billed corella",
+    "genero": "Female",
+    "color": "Violet",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 2198,
+    "stock": 39
+  },
+  {
+    "id": 19,
+    "nombre": "Legaan, ground",
+    "genero": "Female",
+    "color": "Yellow",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1742,
+    "stock": 39
+  },
+  {
+    "id": 20,
+    "nombre": "African porcupine",
+    "genero": "Male",
+    "color": "Orange",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1878,
+    "stock": 43
+  },
+  {
+    "id": 21,
+    "nombre": "Rhea, gray",
+    "genero": "Male",
+    "color": "Goldenrod",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 1581,
+    "stock": 23
+  },
+  {
+    "id": 22,
+    "nombre": "Bandicoot, southern brown",
+    "genero": "Female",
+    "color": "Fuscia",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1133,
+    "stock": 16
+  },
+  {
+    "id": 23,
+    "nombre": "Stork, european",
+    "genero": "Male",
+    "color": "Maroon",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 2126,
+    "stock": 47
+  },
+  {
+    "id": 24,
+    "nombre": "Goose, greylag",
+    "genero": "Female",
+    "color": "Indigo",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1664,
+    "stock": 32
+  },
+  {
+    "id": 25,
+    "nombre": "Lemur, ring-tailed",
+    "genero": "Male",
+    "color": "Teal",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1372,
+    "stock": 11
+  },
+  {
+    "id": 26,
+    "nombre": "Red-shouldered glossy starling",
+    "genero": "Female",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 2214,
+    "stock": 28
+  },
+  {
+    "id": 27,
+    "nombre": "Black-eyed bulbul",
+    "genero": "Female",
+    "color": "Crimson",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 2027,
+    "stock": 16
+  },
+  {
+    "id": 28,
+    "nombre": "Pied cormorant",
+    "genero": "Male",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1583,
+    "stock": 21
+  },
+  {
+    "id": 29,
+    "nombre": "Amazon parrot (unidentified)",
+    "genero": "Female",
+    "color": "Teal",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1178,
+    "stock": 45
+  },
+  {
+    "id": 30,
+    "nombre": "Black-throated cardinal",
+    "genero": "Female",
+    "color": "Indigo",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 2449,
+    "stock": 44
+  },
+  {
+    "id": 31,
+    "nombre": "White-bellied sea eagle",
+    "genero": "Male",
+    "color": "Crimson",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1778,
+    "stock": 27
+  },
+  {
+    "id": 32,
+    "nombre": "Galah",
+    "genero": "Female",
+    "color": "Crimson",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 2058,
+    "stock": 16
+  },
+  {
+    "id": 33,
+    "nombre": "Short-nosed bandicoot",
+    "genero": "Male",
+    "color": "Puce",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1992,
+    "stock": 35
+  },
+  {
+    "id": 34,
+    "nombre": "Egret, snowy",
+    "genero": "Female",
+    "color": "Maroon",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1746,
+    "stock": 38
+  },
+  {
+    "id": 35,
+    "nombre": "Silver-backed fox",
+    "genero": "Male",
+    "color": "Pink",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1109,
+    "stock": 43
+  },
+  {
+    "id": 36,
+    "nombre": "Elk, Wapiti",
+    "genero": "Female",
+    "color": "Pink",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1242,
+    "stock": 20
+  },
+  {
+    "id": 37,
+    "nombre": "Ground monitor (unidentified)",
+    "genero": "Male",
+    "color": "Yellow",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1968,
+    "stock": 20
+  },
+  {
+    "id": 38,
+    "nombre": "Squirrel, malabar",
+    "genero": "Female",
+    "color": "Turquoise",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1311,
+    "stock": 24
+  },
+  {
+    "id": 39,
+    "nombre": "Crane, wattled",
+    "genero": "Female",
+    "color": "Purple",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 2047,
+    "stock": 18
+  },
+  {
+    "id": 40,
+    "nombre": "Heron, black-crowned night",
+    "genero": "Male",
+    "color": "Red",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 2250,
+    "stock": 40
+  },
+  {
+    "id": 41,
+    "nombre": "Lava gull",
+    "genero": "Male",
+    "color": "Pink",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1834,
+    "stock": 47
+  },
+  {
+    "id": 42,
+    "nombre": "Dragon, frilled",
+    "genero": "Male",
+    "color": "Orange",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1806,
+    "stock": 43
+  },
+  {
+    "id": 43,
+    "nombre": "Griffon vulture",
+    "genero": "Female",
+    "color": "Maroon",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 1713,
+    "stock": 49
+  },
+  {
+    "id": 44,
+    "nombre": "Grey phalarope",
+    "genero": "Female",
+    "color": "Pink",
+    "imagen": "http://dummyimage.com/250x200.png/dddddd/000000",
+    "precio": 1919,
+    "stock": 47
+  },
+  {
+    "id": 45,
+    "nombre": "Stork, woolly-necked",
+    "genero": "Female",
+    "color": "Fuscia",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1391,
+    "stock": 13
+  },
+  {
+    "id": 46,
+    "nombre": "Yak",
+    "genero": "Male",
+    "color": "Blue",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 2391,
+    "stock": 14
+  },
+  {
+    "id": 47,
+    "nombre": "Ringtail cat",
+    "genero": "Male",
+    "color": "Red",
+    "imagen": "http://dummyimage.com/250x200.png/cc0000/ffffff",
+    "precio": 2005,
+    "stock": 38
+  },
+  {
+    "id": 48,
+    "nombre": "Ferret, black-footed",
+    "genero": "Male",
+    "color": "Goldenrod",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1872,
+    "stock": 20
+  },
+  {
+    "id": 49,
+    "nombre": "Platypus",
+    "genero": "Male",
+    "color": "Mauv",
+    "imagen": "http://dummyimage.com/250x200.png/ff4444/ffffff",
+    "precio": 1793,
+    "stock": 15
+  },
+  {
+    "id": 50,
+    "nombre": "Iguana, land",
+    "genero": "Male",
+    "color": "Blue",
+    "imagen": "http://dummyimage.com/250x200.png/5fa2dd/ffffff",
+    "precio": 1151,
+    "stock": 45
+  }
+]

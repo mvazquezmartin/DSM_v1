@@ -1,11 +1,11 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../firebase/config";
 import Banner from "./bannerMain/BannerMain";
 import BannerProd from "./bannerProd/BannerProd";
 
 const Main = () => {
-  const [item, setItem] = useState;
+  const [item, setItem] = useState([]);
   useEffect(() => {
     const itemRef = collection(db, "productos");
     const queryNuevaColeccion = query(

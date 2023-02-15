@@ -8,6 +8,8 @@ import Contacto from "./componentes/contacto/Contacto";
 import ItemDetailContainer from "./componentes/itemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./componentes/cart/Cart";
+import Checkout from "./componentes/checkout/Checkout";
+import ErrorRoute from "./componentes/errorRoute/ErrorRoute";
 
 function App() {
   return (
@@ -17,9 +19,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/productos" element={<RenderProd />} />
-          <Route path="/productos/:genero" element={<RenderProd />} />
+          <Route path="/productos/:categoria" element={<RenderProd />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+          <Route path="/productos/:nuevacoleccion" element={<RenderProd />} />
+          <Route path="*" element={ <ErrorRoute/> } />
           <Route path="/cart" element={<Cart />} />
+          <Route path="checkout" element={<Checkout/> } />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/nosotros" element={<Nosotros />} />
         </Routes>

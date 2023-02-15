@@ -9,8 +9,7 @@ const Banner = () => {
         <p className="banner-p">
           Diseño y comodidad en cada pieza. <br /> La elegancia se siente,
           nuestra ropa interior lo demuestra.
-        </p>
-        <div className="my-btc">ESTO ES UN BOTON</div>
+        </p>        
       </div>
     </div>
   );

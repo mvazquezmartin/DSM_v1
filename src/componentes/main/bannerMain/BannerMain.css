@@ -31,10 +31,11 @@ h3 {
   display: flex;
   width: 250px;
   height: 55px;
-  background-color: rgb(36, 39, 39);
+  background-color: #404048;
   color: aliceblue;
   border-radius: 25px;
   text-align: center;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;

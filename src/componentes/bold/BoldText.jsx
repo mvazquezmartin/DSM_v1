@@ -1,3 +1,4 @@
+
 const BoldText = ({children}) =>{
   return(
     <span style={{ fontWeight: 'bold' }}> {children} </span>

@@ -4,8 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 import CartWidget from "../cartWidget/CartWidget";
+import "./Navbar.css";
 
 function NavbarBt() {
   return (
@@ -27,7 +27,7 @@ function NavbarBt() {
               <NavDropdown.Item as={Link} to="/productos/mujer">
                 Mujer
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item as={Link} to="/productos/nuevacoleccion">
                 Nueva Colección
               </NavDropdown.Item>
               <NavDropdown.Divider />

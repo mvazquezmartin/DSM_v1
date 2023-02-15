@@ -3,6 +3,7 @@ import ItemCount from "./IteamCount";
 import { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "./itemDetail.css";
 
 const ItemDetail = ({
   id,
@@ -11,8 +12,8 @@ const ItemDetail = ({
   nombre,
   precio,
   color,
-  talle,
   stock,
+  detalle,
 }) => {
   const navigate = useNavigate();
   const handleVolver = () => {
@@ -36,31 +37,41 @@ const ItemDetail = ({
     addCart(item);
   };
 
-  return (
-    <div>
-      <img src={imagen} alt={nombre} />
-      <h5>{nombre}</h5>
-      <p>{precio}</p>
-      <p>{color} </p>
-      <p>{talle}</p>
-      
-      {!isInCart(id) ? (
-        <ItemCount
-          max={stock}
-          setCantidad={setCantidad}
-          cantidad={cantidad}
-          onAdd={handleAdd}
-        />
-      ) : (
-        <Link to="/cart" className="btn btn-success">
-          Terminar Compra
-        </Link>
-      )}
+  return (     
+      <div className="detail-container">
+      <div className="img-detalle-container">
+        <div className="img-container">
+          <img className="img-detail" src={imagen} alt={nombre} />
+        </div>
+        <div className="detalle-detail">
+          <div className="titulo-container">
+            <h2>{nombre}</h2>
+          </div>
+          <p className="txt-detalle">{detalle}</p>
+          <p className="color-detalle">Color:{color} </p>
+          <p className="precio-detalle">${precio}</p> 
+          <div className={cantidad>1?"visible":"no-visible"}>Total:$ {cantidad*precio}</div>
+          <div className="buttons-detail">
+            {!isInCart(id) ? (
+              <ItemCount
+                max={stock}                
+                setCantidad={setCantidad}
+                cantidad={cantidad}
+                onAdd={handleAdd}
+              />
+            ) : (
+              <Link to="/cart" className="btn btn-success">
+                Terminar Compra
+              </Link>
+            )}
 
-      <button className="btn btn-primary" onClick={handleVolver}>
-        Volver
-      </button>
-    </div>
+            <button className="btn btn-primary" onClick={handleVolver}>
+              Volver
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>    
   );
 };
 

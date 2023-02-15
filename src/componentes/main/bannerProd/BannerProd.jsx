@@ -1,18 +1,22 @@
-import "./BannerProd.css"
+import { Link } from "react-router-dom";
 
-const BannerProd = ({id, nombre, pos}) =>{
-    return(
-        <div className={`banner-producto-container ${pos}`}>
-            <div className="banner-izq">                
-                    <p className="producto-id">Icon: {id} </p>
-                    <p className="producto-nombre"> {nombre} </p>
-                    <p className="botones-varios">POR AHORA ES TEXTO</p>                
-            </div>
-            <div className="banner-der">
-                <img className="prod-img" src={(`/${id}.png`)} alt={nombre} />
-            </div>
-        </div>
-    )
-}
+import "./BannerProd.css";
 
-export default BannerProd
+const BannerProd = ({ id, nombre, invert }) => {
+  return (
+    <div className={`banner-producto-container ${invert ? "invert" : ""}`}>
+      <div className="banner-izq">
+        <p className="producto-id">Icon: {id} </p>
+        <p className="producto-nombre"> {nombre} </p>
+        <Link to="/productos/nuevacoleccion" className="my-btc">
+          SABER MÁS
+        </Link>
+      </div>
+      <div className="banner-der">
+        <img className="prod-img" src={`/${id}.png`} alt={nombre} />
+      </div>
+    </div>
+  );
+};
+
+export default BannerProd;

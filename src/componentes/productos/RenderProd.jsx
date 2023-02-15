@@ -1,37 +1,56 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-/* import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/config";   */ 
 import ProdCard from "./ProdCard";
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import Loading from "../loading/Loading";
 import "./RenderProd.css";
 
 const RenderProd = () => {
-  const [load, setLoad] = useState(true);
   const [productos, setProductos] = useState([]);
-  const { genero } = useParams();
+  const [load, setLoad] = useState(true);
+  const { categoria } = useParams();
 
   useEffect(() => {
     setLoad(true);
-    /* const productosRef = collection(db, "productos");     
-    getDocs(productosRef).then((resp) => {
-      console.log(resp.docChanges.map((doc) => doc.data()));
-    }); */
-  }, [genero]);
+    const productosRef = collection(db, "productos");
+    let queryFinal;
+    if (categoria == "nuevacoleccion") {
+      queryFinal = query(productosRef, where("nueva_coleccion", "==", true));
+    } else if (categoria) {
+      queryFinal = query(productosRef, where("genero", "==", categoria));
+    } else {
+      queryFinal = productosRef;
+    }        
+    getDocs(queryFinal)
+      .then((resp) => {
+        setProductos(
+          resp.docs.map((doc) => {
+            return {
+              ...doc.data(),
+              id: doc.id,
+            };
+          })
+        );
+      })
+      .finally(() => {
+        setLoad(false);
+      });
+  }, [categoria]);
 
   return (
-    <div>
-      {
-        load 
-        ? <h2 style={ {margin: '5rem'} }>Cargando...</h2>
-        :
+    <>
+      {load ? (
+        <Loading />
+      ) : (
         <div className="container-main-prod">
           <h1 className="titulo-productos">Productos</h1>
           <div className="container-producto">
             <ProdCard productos={productos} />
           </div>
         </div>
-      }
-    </div>
+      )}
+    </>
   );
 };
 

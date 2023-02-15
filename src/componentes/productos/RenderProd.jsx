@@ -44,7 +44,7 @@ const RenderProd = () => {
         <Loading />
       ) : (
         <div className="container-main-prod">
-          <h1 className="titulo-productos">Productos</h1>
+          <h1 className="titulo-productos">PRODUCTOS</h1>
           <div className="container-producto">
             <ProdCard productos={productos} />
           </div>

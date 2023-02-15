@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import BoldText from "../bold/BoldText";
 
 const CartLLeno = () => {
-  const { cart, emptyCart, totalCart, removeItem, totalCantidad } = useContext(CartContext);
-  console.log(cart)
+  const { cart, emptyCart, totalCart, removeItem, totalCantidad } =
+    useContext(CartContext);
   return (
     <div className="cart-container">
       <div className="titulo-cart">
@@ -44,7 +44,7 @@ const CartLLeno = () => {
           Vaciar Carrito
         </button>
         <Link className="btn btn-success" to="/checkout">
-          Comprar
+          Finalizar Compra
         </Link>
       </div>
     </div>

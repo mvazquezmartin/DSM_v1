@@ -26,10 +26,13 @@ const Main = () => {
   return (
     <>
       <Banner />
-      <BannerProd id="001" nombre="The Parka" />
-      <BannerProd id="002" nombre="The Canoe" invert="invert" />
-      <BannerProd id="003" nombre="The Mukluk" />
-      <BannerProd id="004" nombre="The Group of 7" invert="invert" />
+      <BannerProd item={item.map((element, index)=>{
+        if(index % 2 !== 0){
+          return{...element, invert: true}
+        }else{
+          return element
+        }
+      })} />      
     </>
   );
 };

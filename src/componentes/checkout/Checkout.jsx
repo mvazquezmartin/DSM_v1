@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { db } from "../../firebase/config";
+import Swal from "sweetalert2";
 import {
   collection,
   addDoc,
@@ -14,6 +15,7 @@ import {
   query,
   getDocs,
 } from "firebase/firestore";
+import BoldText from "../bold/BoldText";
 import "./checkout.css";
 import { async } from "@firebase/util";
 
@@ -70,22 +72,34 @@ const Checkout = () => {
           setOrderId(doc.id);
           emptyCart();
         });
+        console.log(orderId)
+        Swal.fire({
+          title: "Gracias por su compra",
+          text: `Proximamente nos pondremos en contacto.`,
+          icon: "success",
+          buttons: true,
+          dangerMode: true,
+        });
       });
     } else {
-      alert("no hay stock de algun producto");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No hay stock de algun producto",
+      });
     }
   };
   if (orderId) {
     return (
-        <div className="container my-5">
-            <h2>Tu compra ha sido exitosa</h2>
-            <hr/>
-            <p>Tu código de orden es: {orderId}</p>
+      <div className="fin-compra-container">
+        <h2>Tu compra ha sido exitosa</h2>
+        <hr />
+        <p>Tu código de orden es: <BoldText> {orderId} </BoldText></p>
 
-            <Link to="/">Volver</Link>
-        </div>
-    )
-}
+        <Link to="/" className="my-btc">Volver al inicio</Link>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return <Navigate to="/" />;
@@ -94,7 +108,7 @@ const Checkout = () => {
   return (
     <div className="checkout-container">
       <h1>Finalizar Compra</h1>
-      <form className="checkout-form" onSubmit={handleSubmit}>
+      <form className="checkout-form" onSubmit={handleSubmit}>        
         <input
           onChange={handleInputChange}
           type="text"

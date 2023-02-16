@@ -21,7 +21,7 @@ const RenderProd = () => {
       queryFinal = query(productosRef, where("genero", "==", categoria));
     } else {
       queryFinal = productosRef;
-    }        
+    }
     getDocs(queryFinal)
       .then((resp) => {
         setProductos(
@@ -44,7 +44,13 @@ const RenderProd = () => {
         <Loading />
       ) : (
         <div className="container-main-prod">
-          <h1 className="titulo-productos">{categoria ? categoria: "productos"}</h1>
+          <h1 className="titulo-productos">
+            {categoria
+              ? categoria === "nuevacoleccion"
+                ? categoria.replace("nuevacoleccion", "nueva colección!")
+                : categoria
+              : "productos"}
+          </h1>
           <div className="container-producto">
             <ProdCard productos={productos} />
           </div>

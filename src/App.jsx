@@ -22,11 +22,11 @@ function App() {
           <Route path="/productos/:categoria" element={<RenderProd />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
           <Route path="/productos/:nuevacoleccion" element={<RenderProd />} />
-          <Route path="*" element={ <ErrorRoute/> } />
           <Route path="/cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout/> } />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="*" element={ <ErrorRoute/> } />
         </Routes>
         <Footer />
       </BrowserRouter>

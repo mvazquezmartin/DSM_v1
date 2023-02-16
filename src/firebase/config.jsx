@@ -16,10 +16,3 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-
-/* export async function getProd(db) {
-  const prodCol = collection(db, 'productos');
-  const prodSnapshot = await getDocs(prodCol);
-  const prodList = prodSnapshot.docs.map(doc => doc.data());
-  return prodList;
-} */

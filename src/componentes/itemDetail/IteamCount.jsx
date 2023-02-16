@@ -1,8 +1,6 @@
-import { useState } from "react"
 import "./itemCount.css"
 
-  const ItemCount = ({max, setCantidad, cantidad, onAdd}) => {
-    const [total, setTotal] = useState()
+  const ItemCount = ({max, setCantidad, cantidad, onAdd}) => {    
     
     const handleRestar = () => {
       cantidad > 1 && setCantidad(cantidad - 1)

@@ -9,7 +9,7 @@ const CartWidget = () =>{
   return(
     <Link to="/cart" className="icono-cart" >
       <BsCart />
-      <span>{ totalCantidad() } </span>
+      <sup>{ totalCantidad() } </sup>
     </Link>
   )
 }

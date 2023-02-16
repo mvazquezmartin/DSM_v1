@@ -29,8 +29,7 @@ const Main = () => {
 
       <BannerProd
         item={item.map((element, index) => {
-          if (index % 2 !== 0) {
-            console.log({ ...element, invert: "invert" });
+          if (index % 2 !== 0) {            
             return { ...element, invert: "invert" };
           } else {
             return element;

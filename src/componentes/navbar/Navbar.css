@@ -5,11 +5,9 @@
 
 .icono-cart {
   font-size: 1.5rem;
+  color: #d6d0d0;
+  text-decoration: none;
+}
+.icono-cart:hover{
   color: #fff;
 }
-
-/* @media only screen and (max-width: 768px){
-    .esconder{
-        
-}
-} */

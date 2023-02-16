@@ -5,9 +5,9 @@ import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
 import {
   collection,
-  addDoc,  
+  addDoc,
   documentId,
-  where,  
+  where,
   writeBatch,
   query,
   getDocs,
@@ -68,7 +68,6 @@ const Checkout = () => {
           setOrderId(doc.id);
           emptyCart();
         });
-        console.log(orderId)
         Swal.fire({
           title: "Gracias por su compra",
           text: `Proximamente nos pondremos en contacto.`,
@@ -90,9 +89,13 @@ const Checkout = () => {
       <div className="fin-compra-container">
         <h2>Tu compra ha sido exitosa</h2>
         <hr />
-        <p>Tu código de orden es: <BoldText> {orderId} </BoldText></p>
+        <p>
+          Tu código de orden es: <BoldText> {orderId} </BoldText>
+        </p>
 
-        <Link to="/" className="my-btc">Volver al inicio</Link>
+        <Link to="/" className="my-btc">
+          Volver al inicio
+        </Link>
       </div>
     );
   }
@@ -104,7 +107,7 @@ const Checkout = () => {
   return (
     <div className="checkout-container">
       <h1>Finalizar Compra</h1>
-      <form className="checkout-form" onSubmit={handleSubmit}>        
+      <form className="checkout-form" onSubmit={handleSubmit}>
         <input
           onChange={handleInputChange}
           type="text"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import imgContacto from "/imgContacto.png";
+import Swal from "sweetalert2";
 import "./Contacto.css";
 
 const Contacto = () => {
@@ -25,14 +26,17 @@ const Contacto = () => {
     };
     const msjRef = collection(db, "mensajes");
     addDoc(msjRef, mensaje)
-  };
-  const handleClear = () =>{
     setValues({
       nombre:"",
       email:"",
       msj:"",
     })
-  }
+    Swal.fire(
+      'Gracias por su mensaje!',
+      'Pronto nos pondremos en contacto',
+      'success'
+    )
+  };  
   return (
     <div className="container-contacto">
       <h3>Contanos tus dudas, preguntas o sugerencia</h3>

@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 import "./BannerProd.css";
 
-const BannerProd = ({ item }) => {
+const BannerProd = ({ item }) => {  
   return (
     <>
       {item.map((prod) => (
-        <div key={prod.id} className={`banner-producto-container ${item.invert ? "invert" : ""}`}>
+        <div key={prod.id} className={`banner-producto-container ${prod.invert ? "invert" : ""}`}>
           <div className="banner-izq">            
             <p className="producto-nombre"> {prod.nombre} </p>
             <Link to={`/detail/${prod.id}`} className="my-btc">

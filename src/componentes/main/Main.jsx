@@ -22,17 +22,21 @@ const Main = () => {
         })
       );
     });
-  });
+  }, []);
   return (
     <>
       <Banner />
-      <BannerProd item={item.map((element, index)=>{
-        if(index % 2 !== 0){
-          return{...element, invert: true}
-        }else{
-          return element
-        }
-      })} />      
+
+      <BannerProd
+        item={item.map((element, index) => {
+          if (index % 2 !== 0) {
+            console.log({ ...element, invert: "invert" });
+            return { ...element, invert: "invert" };
+          } else {
+            return element;
+          }
+        })}
+      />
     </>
   );
 };

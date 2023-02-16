@@ -26,6 +26,13 @@ const Contacto = () => {
     const msjRef = collection(db, "mensajes");
     addDoc(msjRef, mensaje)
   };
+  const handleClear = () =>{
+    setValues({
+      nombre:"",
+      email:"",
+      msj:"",
+    })
+  }
   return (
     <div className="container-contacto">
       <h3>Contanos tus dudas, preguntas o sugerencia</h3>

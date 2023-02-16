@@ -5,19 +5,15 @@ import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
 import {
   collection,
-  addDoc,
-  doc,
+  addDoc,  
   documentId,
-  where,
-  updateDoc,
-  getDoc,
+  where,  
   writeBatch,
   query,
   getDocs,
 } from "firebase/firestore";
 import BoldText from "../bold/BoldText";
 import "./checkout.css";
-import { async } from "@firebase/util";
 
 const Checkout = () => {
   const { cart, totalCart, emptyCart } = useCartContext();

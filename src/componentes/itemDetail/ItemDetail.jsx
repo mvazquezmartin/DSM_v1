@@ -3,6 +3,7 @@ import ItemCount from "./IteamCount";
 import { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Swal from "sweetalert2";
 import "./itemDetail.css";
 
 const ItemDetail = ({
@@ -34,8 +35,16 @@ const ItemDetail = ({
       stock,
       cantidad,
     };
-    addCart(item);
+    if(item.stock === 0){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No hay stock en estos momentos"  ,
+      });
+      return
+    }else{addCart(item);}    
   };
+ 
 
   return (     
       <div className="detail-container">

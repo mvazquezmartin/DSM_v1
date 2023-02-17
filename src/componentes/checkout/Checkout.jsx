@@ -112,15 +112,8 @@ const Checkout = () => {
           title: "Gracias por su compra",
           text: `Proximamente nos pondremos en contacto.`,
           icon: "success",
-          buttons: true,
-          dangerMode: true,
+          buttons: true,          
         });
-      });
-    } else {      
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: `No hay stock de: ${outOfStock.map((item) => item.nombre).join(", ")}` ,
       });
     }
   };

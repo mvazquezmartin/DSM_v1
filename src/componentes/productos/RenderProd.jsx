@@ -47,7 +47,7 @@ const RenderProd = () => {
           <h1 className="titulo-productos">
             {categoria
               ? categoria === "nuevacoleccion"
-                ? categoria.replace("nuevacoleccion", "nueva colección!")
+                ? categoria.replace("nuevacoleccion", "nueva colección")
                 : categoria
               : "productos"}
           </h1>

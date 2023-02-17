@@ -22,6 +22,7 @@ const Checkout = () => {
     nombre: "",
     direccion: "",
     email: "",
+    repeatEmail: "",
   });
 
   const handleInputChange = (e) => {
@@ -32,7 +33,46 @@ const Checkout = () => {
   };
 
   const handleSubmit = async (e) => {
+    const emailValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     e.preventDefault();
+
+    if (values.nombre.length < 2) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Es obligatorio el campo Nombre",
+      });
+      return;
+    }
+
+    if (values.direccion.length < 2) {
+      console.log(!emailValido.test(values.email));
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Es obligatorio el campo Dirección",
+      });
+      return;
+    }
+
+    if (!emailValido.test(values.email)) {    
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No es un e-mail valido",
+      });
+      return;
+    }
+
+    if (values.email !== values.repeatEmail) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No coincide el e-mail",
+      });
+      return;
+    }
+
     const order = {
       cliente: values,
       items: cart,
@@ -128,6 +168,13 @@ const Checkout = () => {
           name="email"
           value={values.email}
           placeholder="E-mail"
+        />
+        <input
+          onChange={handleInputChange}
+          type="email"
+          name="repeatEmail"
+          value={values.repeatEmail}
+          placeholder="Repita el E-mail"
         />
         <button className="btn btn-primary">Enviar</button>
       </form>

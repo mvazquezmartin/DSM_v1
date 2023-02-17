@@ -20,7 +20,16 @@ const Contacto = () => {
   };
 
   const handleSubmit = (e) => {
+    const emailValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     e.preventDefault();
+    if(!emailValido.test(values.email)){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No es un e-mail valido",
+      });
+      return
+    }
     const mensaje = {
       mensaje: values,
     };
@@ -65,16 +74,14 @@ const Contacto = () => {
               type="text"
               name="nombre"
               value={values.nombre}
-              placeholder="Nombre"
-              required
+              placeholder="Nombre"              
             />
             <input
               onChange={handleInputChange}
               type="email"
               name="email"
               value={values.email}
-              placeholder="E-mail"
-              required
+              placeholder="E-mail"              
             />
             <textarea
               onChange={handleInputChange}
@@ -83,8 +90,7 @@ const Contacto = () => {
               value={values.msj}
               cols="30"
               rows="10"
-              placeholder="Contanos tus dudas, preguntas o sugerencia..."
-              required
+              placeholder="Contanos tus dudas, preguntas o sugerencia..."             
             ></textarea>
             <button className="btn btn-primary">Enviar</button>
           </form>

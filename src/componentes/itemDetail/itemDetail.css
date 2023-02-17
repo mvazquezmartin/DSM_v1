@@ -33,10 +33,10 @@
 }
 .txt-detalle {
   width: 400px;
-  margin: 0 1rem;
+  margin: 1rem;
   font-size: 1.2rem;  
 }
-.color-detalle{
+.color-detalle{  
   width: 93%;  
   text-align: left;
 }
@@ -46,13 +46,12 @@
   font-weight: bold;
   font-size: 2rem;
 }
+.stock-detalle{
+  width: 93%;
+}
 .visible{
   width: 100%;
   text-align: center;  
-  height: 50px;
-}
-.no-visible{
-  visibility: hidden;
   height: 50px;
 }
 .buttons-detail {

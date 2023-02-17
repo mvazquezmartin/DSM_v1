@@ -48,9 +48,10 @@ const ItemDetail = ({
             <h2>{nombre}</h2>
           </div>
           <p className="txt-detalle">{detalle}</p>
-          <p className="color-detalle">Color:{color} </p>
+          <p className="color-detalle">Color: {color} </p>
+          <p className="stock-detalle">Unidades disponible: {stock}</p>
           <p className="precio-detalle">${precio}</p> 
-          <div className={cantidad>1?"visible":"no-visible"}>Total:$ {cantidad*precio}</div>
+          <div className="visible">Total:${cantidad*precio}</div>
           <div className="buttons-detail">
             {!isInCart(id) ? (
               <ItemCount

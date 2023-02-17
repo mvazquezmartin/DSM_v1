@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
@@ -20,7 +20,7 @@ const Checkout = () => {
   const [orderId, setOrderId] = useState(null);
   const [values, setValues] = useState({
     nombre: "",
-    direccion: "",
+    domicilio: "",
     email: "",
     repeatEmail: "",
   });
@@ -45,12 +45,12 @@ const Checkout = () => {
       return;
     }
 
-    if (values.direccion.length < 2) {
+    if (values.domicilio.length < 2) {
       console.log(!emailValido.test(values.email));
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Es obligatorio el campo Dirección",
+        text: "Es obligatorio el campo Domicilio",
       });
       return;
     }
@@ -102,7 +102,7 @@ const Checkout = () => {
         outOfStock.push(item);
       }
     });
-    if (outOfStock.length === 0) {
+    if (outOfStock.length === 0) {      
       batch.commit().then(() => {
         addDoc(ordersRef, order).then((doc) => {
           setOrderId(doc.id);
@@ -116,11 +116,11 @@ const Checkout = () => {
           dangerMode: true,
         });
       });
-    } else {
+    } else {      
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "No hay stock de algun producto",
+        text: `No hay stock de: ${outOfStock.map((item) => item.nombre).join(", ")}` ,
       });
     }
   };
@@ -140,10 +140,6 @@ const Checkout = () => {
     );
   }
 
-  if (cart.length === 0) {
-    return <Navigate to="/" />;
-  }
-
   return (
     <div className="checkout-container">
       <h1>Finalizar Compra</h1>
@@ -158,8 +154,8 @@ const Checkout = () => {
         <input
           onChange={handleInputChange}
           type="text"
-          name="direccion"
-          value={values.direccion}
+          name="domicilio"
+          value={values.domicilio}
           placeholder="Domicilio"
         />
         <input

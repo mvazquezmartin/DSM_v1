@@ -19,6 +19,8 @@
 }
 .img-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img-detail {
   width: 500px;
@@ -41,7 +43,7 @@
   text-align: left;
 }
 .precio-detalle{
-  width: 100%;
+  width: 93%;
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
@@ -75,18 +77,18 @@
   }
   .detalle-detail {
     justify-content: space-between;
-    align-items: center;
-    max-width: none;
+    align-items: center;    
   }
   .txt-detalle{
     margin: 0;
     padding: 0 1rem;
     font-size: 1.2rem;
+    text-align: center;
   }
   .color-detalle{
     margin-top: 1rem;
     font-size: 1.2rem;
     width: 100%;    
-    padding-left: 1rem;
+    
   }
 }

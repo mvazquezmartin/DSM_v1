@@ -3,7 +3,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import imgContacto from "/imgContacto.png";
 import Swal from "sweetalert2";
-import alertError from "../alertsError/AlertError";
+import alertError from "../alertsError/alertError";
 import "./Contacto.css";
 
 const Contacto = () => {

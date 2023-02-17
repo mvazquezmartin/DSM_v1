@@ -26,7 +26,7 @@ function App() {
           <Route path="checkout" element={<Checkout />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="*" element={<ErrorRoute />} />          
+          <Route path="*" element={<ErrorRoute />} />
         </Routes>
         <Footer />
       </BrowserRouter>

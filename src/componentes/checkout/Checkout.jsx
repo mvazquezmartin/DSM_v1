@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
@@ -12,13 +11,14 @@ import {
   query,
   getDocs,
 } from "firebase/firestore";
-import BoldText from "../bold/BoldText";
+import FinCompra from "./FinCompra";
+import alertError from "../alertsError/alertError";
 import "./checkout.css";
-import  alertError from "../alertsError/AlertError";
 
 const Checkout = () => {
   const { cart, totalCart, emptyCart } = useCartContext();
   const [orderId, setOrderId] = useState(null);
+  const [dia, setDia] = useState(null)
   const [values, setValues] = useState({
     nombre: "",
     domicilio: "",
@@ -34,33 +34,37 @@ const Checkout = () => {
   };
 
   const handleSubmit = async (e) => {
-    const emailValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     e.preventDefault();
+    const emailValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if (values.nombre.length < 2) {
-      alertError("Esto es una prueba")  
-      return 
+      alertError("Es obligatorio el campo Nombre");
+      return;
     }
 
     if (values.domicilio.length < 2) {
-      alertError("Es obligatorio el campo Domicilio")
+      alertError("Es obligatorio el campo Domicilio");
       return;
     }
 
     if (!emailValido.test(values.email)) {
-      alertError("No es un e-mail valido")
+      alertError("No es un e-mail valido");
       return;
     }
 
     if (values.email !== values.repeatEmail) {
-      alertError("No coincide el e-mail")
+      alertError("No coincide el e-mail");
       return;
     }
-
+    
+    const date = new Date();
+    const dateId = date.toLocaleString();    
+    setDia(dateId)
+    
     const order = {
       cliente: values,
       items: cart,
-      total: totalCart(),
+      total: totalCart(),         
     };
 
     const batch = writeBatch(db);
@@ -102,33 +106,7 @@ const Checkout = () => {
     }
   };
   if (orderId) {
-    const dateId = new Date();
-    const day = dateId.getDate();
-    const hour = dateId.getHours();
-    const minute = dateId.getMinutes();
-    const second = dateId.getSeconds();
-
-    return (
-      <div className="fin-compra-container">
-        <h2>Tu compra ha sido exitosa</h2>
-        <hr />
-        <p>
-          Fecha de la compra:{" "}
-          <BoldText>
-            {" "}
-            {day}/{dateId.getMonth() + 1}/{dateId.getFullYear()} {hour}:{minute}
-            :{second}{" "}
-          </BoldText>
-        </p>
-        <p>
-          Tu código de orden es: <BoldText> {orderId} </BoldText>
-        </p>
-
-        <Link to="/" className="my-btc">
-          Volver al inicio
-        </Link>
-      </div>
-    );
+    return <FinCompra date={dia} orderId={orderId} />;
   }
 
   return (

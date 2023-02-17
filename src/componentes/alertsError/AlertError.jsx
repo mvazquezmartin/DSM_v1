@@ -1,13 +1,11 @@
 import Swal from "sweetalert2";
 
-const AlertError1 = ({ txt="Es obligatorio el campo Nombre" }) => {
-  return(
+const alertError = (txt) => {  
   Swal.fire({
     icon: "error",
     title: "Oops...",
-    text: `${txt}`,
-  })
-  )
+    text: txt,
+  })  
 };
 
-export default AlertError1;
+export default alertError;

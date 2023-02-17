@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
-import AlertError1 from "../alertsError/AlertError";
 import {
   collection,
   addDoc,
@@ -15,7 +14,7 @@ import {
 } from "firebase/firestore";
 import BoldText from "../bold/BoldText";
 import "./checkout.css";
-import AlertError from "../alertsError/AlertError";
+import  alertError from "../alertsError/AlertError";
 
 const Checkout = () => {
   const { cart, totalCart, emptyCart } = useCartContext();
@@ -39,38 +38,22 @@ const Checkout = () => {
     e.preventDefault();
 
     if (values.nombre.length < 2) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Es obligatorio el campo Nombre",
-      });
-      return;
+      alertError("Esto es una prueba")  
+      return 
     }
 
     if (values.domicilio.length < 2) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Es obligatorio el campo Domicilio",
-      });
+      alertError("Es obligatorio el campo Domicilio")
       return;
     }
 
     if (!emailValido.test(values.email)) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "No es un e-mail valido",
-      });
+      alertError("No es un e-mail valido")
       return;
     }
 
     if (values.email !== values.repeatEmail) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "No coincide el e-mail",
-      });
+      alertError("No coincide el e-mail")
       return;
     }
 

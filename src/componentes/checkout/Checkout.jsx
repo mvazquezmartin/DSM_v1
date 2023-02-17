@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { db } from "../../firebase/config";
 import Swal from "sweetalert2";
+import AlertError1 from "../alertsError/AlertError";
 import {
   collection,
   addDoc,
@@ -14,6 +15,7 @@ import {
 } from "firebase/firestore";
 import BoldText from "../bold/BoldText";
 import "./checkout.css";
+import AlertError from "../alertsError/AlertError";
 
 const Checkout = () => {
   const { cart, totalCart, emptyCart } = useCartContext();
@@ -46,7 +48,6 @@ const Checkout = () => {
     }
 
     if (values.domicilio.length < 2) {
-      console.log(!emailValido.test(values.email));
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -55,7 +56,7 @@ const Checkout = () => {
       return;
     }
 
-    if (!emailValido.test(values.email)) {    
+    if (!emailValido.test(values.email)) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -102,7 +103,7 @@ const Checkout = () => {
         outOfStock.push(item);
       }
     });
-    if (outOfStock.length === 0) {      
+    if (outOfStock.length === 0) {
       batch.commit().then(() => {
         addDoc(ordersRef, order).then((doc) => {
           setOrderId(doc.id);
@@ -112,16 +113,30 @@ const Checkout = () => {
           title: "Gracias por su compra",
           text: `Proximamente nos pondremos en contacto.`,
           icon: "success",
-          buttons: true,          
+          buttons: true,
         });
       });
     }
   };
   if (orderId) {
+    const dateId = new Date();
+    const day = dateId.getDate();
+    const hour = dateId.getHours();
+    const minute = dateId.getMinutes();
+    const second = dateId.getSeconds();
+
     return (
       <div className="fin-compra-container">
         <h2>Tu compra ha sido exitosa</h2>
         <hr />
+        <p>
+          Fecha de la compra:{" "}
+          <BoldText>
+            {" "}
+            {day}/{dateId.getMonth() + 1}/{dateId.getFullYear()} {hour}:{minute}
+            :{second}{" "}
+          </BoldText>
+        </p>
         <p>
           Tu código de orden es: <BoldText> {orderId} </BoldText>
         </p>

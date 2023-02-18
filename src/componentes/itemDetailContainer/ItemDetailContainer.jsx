@@ -5,10 +5,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import Loading from "../loading/Loading";
 import "./ItemDetailContainer.css";
+import ErrorRoute from "../errorRoute/ErrorRoute";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const [load, setLoad] = useState(true);
+  const [error, setError] = useState(false);  
   const { itemId } = useParams();
 
   useEffect(() => {
@@ -16,7 +18,14 @@ const ItemDetailContainer = () => {
     const docRef = doc(db, "productos", itemId);
     getDoc(docRef)
       .then((doc) => {
-        setItem({ ...doc.data(), id: doc.id });
+        if (doc.exists()) {
+          setItem({ ...doc.data(), id: doc.id });                    
+        }else{
+          throw new Error("Producto no encontrado");          
+        }
+      })
+      .catch((error) => {
+        setError(true);        
       })
       .finally(() => {
         setLoad(false);
@@ -25,13 +34,19 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {load ? (
-        <Loading />
-      ) : (
-        <div className="item-detail-container">
-          {item && <ItemDetail {...item} />}
-        </div>
-      )}
+    {load ? (
+      <Loading />
+    ) : (
+      <>
+        {error ? (
+          <ErrorRoute />
+        ) : (
+          <div className="item-detail-container">
+            {item && <ItemDetail {...item} />}
+          </div>
+        )}
+      </>
+    )}
     </>
   );
 };

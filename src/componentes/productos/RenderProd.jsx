@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import Loading from "../loading/Loading";
+import ErrorRoute from "../errorRoute/ErrorRoute";
 import "./RenderProd.css";
 
 const RenderProd = () => {
@@ -38,26 +39,27 @@ const RenderProd = () => {
       });
   }, [categoria]);
 
+  let renderProductos;
+  if (["hombre", "mujer", "nuevacoleccion"].includes(categoria)) {
+    renderProductos = (
+      <div className="container-producto">
+        <ProdCard productos={productos} />
+      </div>
+    );
+  } else {
+    renderProductos = <ErrorRoute />;
+  }
+  
   return (
     <>
       {load ? (
         <Loading />
       ) : (
         <div className="container-main-prod">
-          <h1 className="titulo-productos">
-            {categoria
-              ? categoria === "nuevacoleccion"
-                ? categoria.replace("nuevacoleccion", "nueva colección")
-                : categoria
-              : "productos"}
-          </h1>
-          <div className="container-producto">
-            <ProdCard productos={productos} />
-          </div>
+          {renderProductos}
         </div>
       )}
     </>
   );
-};
-
+}
 export default RenderProd;

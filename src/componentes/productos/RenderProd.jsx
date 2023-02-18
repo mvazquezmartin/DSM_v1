@@ -42,8 +42,26 @@ const RenderProd = () => {
   let renderProductos;
   if (["hombre", "mujer", "nuevacoleccion"].includes(categoria)) {
     renderProductos = (
-      <div className="container-producto">
-        <ProdCard productos={productos} />
+      <div className="container-main-prod">
+          <h1 className="titulo-productos">
+            {categoria
+              ? categoria === "nuevacoleccion"
+                ? categoria.replace("nuevacoleccion", "nueva colección")
+                : categoria
+              : "productos"}
+          </h1>
+          <div className="container-producto">
+            <ProdCard productos={productos} />
+          </div>
+        </div>
+    );
+  } else if (categoria === undefined) {
+    renderProductos = (
+      <div className="container-main-prod">
+        <h1 className="titulo-productos">productos</h1>
+        <div className="container-producto">
+          <ProdCard productos={productos} />
+        </div>
       </div>
     );
   } else {
@@ -55,7 +73,7 @@ const RenderProd = () => {
       {load ? (
         <Loading />
       ) : (
-        <div className="container-main-prod">
+        <div>
           {renderProductos}
         </div>
       )}
